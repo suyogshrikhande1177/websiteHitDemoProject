@@ -1,0 +1,27 @@
+server:
+  port: 8085
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  application:
+    name: hitDemo
+  datasource:
+    url: jdbc:mysql://localhost:3306/hit_demo_Project?createDatabaseIfNotExist=true&useUnicode=true&characterEncoding=utf-8
+    username: root
+    password: root
+    hikari:
+      maximum-pool-size: 6
+  jpa:
+    show-sql: false
+    hibernate:
+      ddl-auto: update
+    properties:
+      enable_lazy_load_no_trans: true
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL8Dialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
